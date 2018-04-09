@@ -42,3 +42,5 @@ plugins:
 
 disqus:
   shortname: nyangawa
+
+google_analytics: UA-117120151-1
