@@ -8,7 +8,7 @@ categories: jekyll update
 # Why I'm writing this
 
 Since approximately half an year ago, I began to do some bug hunting stuff.
-During the pass several months, I learned a lot and found some vulnerabilities
+During the past several months, I learned a lot and found some vulnerabilities
 in some popular software.
 
 Due to my own background (several years of experience for being a system
