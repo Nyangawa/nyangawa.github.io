@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Path Traversal in Github pages, and more for Github Enterprise"
-date:   2018-12-12 12:34:11 +0800
+title:  "Path Traversal in GitHub pages, and more for GitHub Enterprise"
+date:   2019-01-01 12:34:11 +0800
 categories: jekyll update
 ---
 
@@ -10,7 +10,7 @@ I started to write blogs (again) from early 2018. I had a blog constructed with
 [obtvse](https://github.com/natew/obtvse), and added support to the
 mark-up syntax of [Org mode](https://orgmode.org/) (yes I'm an Emacs user) to
 make myself happy. But this time I was gonna try something new,
-like [Jekyll](https://jekyllrb.com) hosted on Github pages, which is easy to
+like [Jekyll](https://jekyllrb.com) hosted on GitHub pages, which is easy to
 setup and control. So I spent like 20 minutes setting up a minimal blog powered
 by Jekyll, then after several months when I finally had some
 time to look into this blog and to do some customization, the story begins.
@@ -57,41 +57,41 @@ error message:
 "The symbolic link _layouts/passwd.html targets a file which does not exist within your site's repository."
 ```
 
-oops, sounds like Github doesn't like me to have a symbolic link in this
+oops, sounds like GitHub doesn't like me to have a symbolic link in this
 repository. Can I bypass it?
 
 # Jekyll-remote-theme
 According to [this announcement](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
-Github pages supports jekyll-remote-theme plugin which allows a Jekyll site to
-use other Github.com hosted Jekyll theme directly, without storing a copy
+GitHub pages supports jekyll-remote-theme plugin which allows a Jekyll site to
+use other GitHub.com hosted Jekyll theme directly, without storing a copy
 of the layout files in my own repository. This is an awesome feature for people
 who likes customization and, of course, me.
 
 So I created another repository with the same link part `_layout/passwd.html -> /etc/passwd`.
 The repository was at [nyangawa/theme](https://github.com/nyangawa/theme). Then
 I modified my own `_config.yml` to add `remote_theme: nyangawa/theme`. Visiting
-`https://REDACTED.github.io/passwd.html` showed me the content of Github's `/etc/passwd`.
+`https://REDACTED.github.io/passwd.html` showed me the content of GitHub's `/etc/passwd`.
 (This website was deleted after I reported the issue. I didn't reserve an screenshot neither :p)
 
-However, Github pages service builds every site in an isolated environment
+However, GitHub pages service builds every site in an isolated environment
 (docker container). There is actually very few information to grab from it.
 But this is not an end yet.
 
-# Github Enterprise
-[Github Enterprise](https://enterprise.github.com/) is a self-hosted version of Github.
+# GitHub Enterprise
+[GitHub Enterprise](https://enterprise.github.com/) is a self-hosted version of GitHub.
 I downloaded an trial license for security assessment, so I decided to replicate
-this bug in Github Enterprise to see whether there is any difference between Github.com
-and Github Enterprise.
+this bug in GitHub Enterprise to see whether there is any difference between GitHub.com
+and GitHub Enterprise.
 
-About deciphering the source code of Github Enterprise. @orangetw's [article](https://blog.orange.tw/2017/01/bug-bounty-github-enterprise-sql-injection.html)
+About deciphering the source code of GitHub Enterprise. @orangetw's [article](https://blog.orange.tw/2017/01/bug-bounty-github-enterprise-sql-injection.html)
 explained this perfectly. I'm not going to explain that again, except that `ruby_concealer.so`
 is part of the `ruby` executable in the VM since a recent version. So there is
 no longer `require "ruby_concealer.so"` in the source code.
 
-After pushing the repository to my Github Enterprise, I found that things are
+After pushing the repository to my GitHub Enterprise, I found that things are
 different. There's no isolation here.
 
-![fstab](/assets/2018-12-12-Github-Path-Traversal-To-RCE_1.png)
+![fstab](/assets/2018-12-12-GitHub-Path-Traversal-To-RCE_1.png)
 
 source code in `/data/pages/current/script/page-build` proves my guess.
 
@@ -105,11 +105,11 @@ fi
 My memory brings to me [This blog](https://www.exablue.de/blog/2017-03-15-github-enterprise-remote-code-execution.html)
 by iblue. And yes I can read the session secret now.
 
-![secrets](/assets/2018-12-12-Github-Path-Traversal-To-RCE_2.png)
+![secrets](/assets/2018-12-12-GitHub-Path-Traversal-To-RCE_2.png)
 
 After all, send the payload and check.
 
-![shell](/assets/2018-12-12-Github-Path-Traversal-To-RCE_3.png)
+![shell](/assets/2018-12-12-GitHub-Path-Traversal-To-RCE_3.png)
 
 # Another hit on Jekyll (Updated on 2018-10-24)
 
@@ -178,16 +178,16 @@ a system engineer. To conclude some common pitfalls where a newbie or
 even experienced developer could encounter.
 
 # Timeline
-Github has a very responsive and efficient bug bounty program.
+GitHub has a very responsive and efficient bug bounty program.
 
-1. Aug 16th: Report arbitrary file read to [Github on Hackerone](https://hackerone.com/github)
+1. Aug 16th: Report arbitrary file read to [GitHub on Hackerone](https://hackerone.com/github)
 1. Aug 17th: Got validation
 1. Aug 17th: Report the supplementary RCE part.
 1. Aug 21st: Issue fixed
-1. Aug 21st: $10000 bounty from Github, a coupon of Github private repositories for
+1. Aug 21st: $10000 bounty from GitHub, a coupon of GitHub private repositories for
 life and an invitation to [@githubbounty](https://github.com/githubbounty)
-1. Aug 23rd: $2000 extra from Github for verifying a not properly packaged release.
-1. Sep 10th: Reported another directory traversal issue in Github pages and got
+1. Aug 23rd: $2000 extra from GitHub for verifying a not properly packaged release.
+1. Sep 10th: Reported another directory traversal issue in GitHub pages and got
 a quick first response within a several hours
-1. Sep 29th: A fixed version of Github enterprise was released
-1. Oct 4th: $10000 bounty from Github for the second bug
+1. Sep 29th: A fixed version of GitHub enterprise was released
+1. Oct 4th: $10000 bounty from GitHub for the second bug
