@@ -177,17 +177,5 @@ I'll share some experiences about secure coding from the perspective of
 a system engineer. To conclude some common pitfalls where a newbie or
 even experienced developer could encounter.
 
-# Timeline
-GitHub has a very responsive and efficient bug bounty program.
-
-1. Aug 16th: Report arbitrary file read to [GitHub on Hackerone](https://hackerone.com/github)
-1. Aug 17th: Got validation
-1. Aug 17th: Report the supplementary RCE part.
-1. Aug 21st: Issue fixed
-1. Aug 21st: $10000 bounty from GitHub, a coupon of GitHub private repositories for
-life and an invitation to [@githubbounty](https://github.com/githubbounty)
-1. Aug 23rd: $2000 extra from GitHub for verifying a not properly packaged release.
-1. Sep 10th: Reported another directory traversal issue in GitHub pages and got
-a quick first response within a several hours
-1. Sep 29th: A fixed version of GitHub enterprise was released
-1. Oct 4th: $10000 bounty from GitHub for the second bug
+Finally I want to thank GitHub for hosting such a responsive and
+efficient bug bounty program.
