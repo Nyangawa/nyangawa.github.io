@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-About me: 
+About me:
 
 GitHub [@nyangawa](https://github.com/nyangawa)
 
@@ -24,3 +24,4 @@ Collections:
 - CVE-2018-20499
 - CVE-2019-6240
 - CVE-2019-6792
+- CVE-2019-8324
