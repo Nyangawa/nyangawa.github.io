@@ -1,10 +1,9 @@
 ---
-layout: page
-title: About
+layout: single
+title: About me
+author_profile: true
 permalink: /about/
 ---
-
-About me:
 
 GitHub [@nyangawa](https://github.com/nyangawa)
 
@@ -13,6 +12,8 @@ Hackerone [@nyangawa](https://hackerone.com/nyangawa)
 Twitter [@nyan_gawa](https://twitter.com/nyan_gawa)
 
 Thanks to [Jekyll](https://jekyllrb.com/) for making blog easy and elegant.
+
+Thanks to [@mmistakes](https://github.com/mmistakes/minimal-mistakes) for creating a fantastic theme.
 
 Collections:
 - CVE-2018-14364

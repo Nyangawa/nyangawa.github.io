@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Arbitrary data deserialization in Ruby"
 date:   2018-04-08 13:44:11 +0800
-categories: jekyll update
+categories: security
 ---
 Deserializing untrusted data is usually dangerous and can lead to serious
 consequences like remote code execution. Remember not to deserialize user-input

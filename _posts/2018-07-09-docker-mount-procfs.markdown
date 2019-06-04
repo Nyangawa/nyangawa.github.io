@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "What happens when I mount procfs from host to a Docker container, and why?"
 date:   2018-07-09 13:34:11 +0800
-categories: jekyll update
+categories: security
 ---
 
 Docker has been a major component of my daily work since several years ago. It

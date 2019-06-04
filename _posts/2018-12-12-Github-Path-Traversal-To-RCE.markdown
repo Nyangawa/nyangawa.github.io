@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Path Traversal in GitHub pages, and more for GitHub Enterprise"
 date:   2018-12-12 12:34:11 +0800
-categories: jekyll update
+categories: security
 ---
 
 # Brief

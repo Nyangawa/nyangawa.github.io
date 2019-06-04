@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Secure coding with Ruby from the perspective of a system engineer (2)"
 date:   2018-10-31 16:55:15 +0800
-categories: jekyll update
+categories: security
 ---
 
 # Before I continue
