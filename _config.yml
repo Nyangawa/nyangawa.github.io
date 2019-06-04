@@ -43,6 +43,9 @@ author:
   location         : "Beijing"
   email            : i@nyangawa.me
   links:
+    - label: "About me"
+      icon: "fas fa-fw fa-link"
+      url: "https://blog.nyangawa.me/about"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:i@nyangawa.me
