@@ -15,9 +15,9 @@ masthead_title           : "Nyangawa"
 breadcrumbs              : true
 words_per_minute       : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : disqus # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : nyangawa # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -31,8 +31,6 @@ comments:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 remote_theme: "mmistakes/minimal-mistakes@4.16.4"
-disqus:
-  shortname: nyangawa
 google_analytics: UA-117120151-1
 
 # Site Author
@@ -46,9 +44,6 @@ author:
     - label: "About me"
       icon: "fas fa-fw fa-link"
       url: "https://blog.nyangawa.me/about"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:i@nyangawa.me
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/nyan_gawa"
@@ -190,6 +185,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: false
-      comments: # true
+      comments: true
       share: true
       related: true
