@@ -31,7 +31,11 @@ comments:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 remote_theme: "mmistakes/minimal-mistakes@4.16.4"
-google_analytics: UA-117120151-1
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: UA-117120151-1
+    anonymize_ip: false # default
 
 # Site Author
 author:
