@@ -3,7 +3,7 @@ title:  "Chaining multiple low-impact bugs to arbitrary file read in GitLab"
 categories: security
 ---
 
-Since around August 2019, I began to read the source code of GitLab and test it
+Since around August 2018, I began to read the source code of GitLab and test it
 over and over. The time pays me back, during the first several months I found
 some critical bugs (mentioned in my previous posts). Unsurprisingly, it became
 harder and harder to find new high-impact and easily exploitable bugs as the
