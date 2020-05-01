@@ -7,8 +7,6 @@ permalink: /about/
 
 GitHub [@nyangawa](https://github.com/nyangawa)
 
-Hackerone [@nyangawa](https://hackerone.com/nyangawa)
-
 Twitter [@nyan_gawa](https://twitter.com/nyan_gawa)
 
 Thanks to [Jekyll](https://jekyllrb.com/) for making blog easy and elegant.
